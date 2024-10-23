@@ -161,13 +161,26 @@
         #about p {
             font-size: 1.2rem;
         }
+
+        .icon {
+            font-size: 2rem;
+            margin: 0 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            color: #1e90ff;
+        }
     </style>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <header>
     <h1>FlankerXd</h1>
-    <p>Graphic Designer & Video Editor .</p>
+    <p>Graphic Designer & Video Editor.</p>
     <p>I'm a passionate graphic designer and video editor. I specialize in creating stunning visuals and engaging videos for various platforms.</p>
     <button class="contact-button" onclick="openModal()">Contact Me</button>
 </header>
@@ -203,73 +216,4 @@
         <div class="project">
             <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/regalto_smaple-1.png">
         </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/santra.png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/snaxgangstar1.png">
-        </div>
-        <div class="project">
-          <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/bgmi-smaple1.png">
-        </div>
-    </div>
-    
-    <h1>Other</h1>
-    <div class="project-grid">
-        <div class="project">
-          <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/111111.png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/fake_Mask.png">
-        </div>
-         <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/experiment.-3psd.png">
-        </div>
-         <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/experiment.-5psd.png">
-        </div>
-         <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/New%20car.jpg">
-        </div>
-    </div>
-</section>
-
-<!-- Modal Popup for Contact Info -->
-<div id="contactModal" class="modal">
-    <div class="modal-content">
-        <h2>Contact Information</h2>
-        <p>Email: flankernub070@gmail.com</p>
-        <p>Phone: <a href="https://wa.me/917569339678" target="_blank">+91 7569339678</a></p>
-        <button class="close-button" onclick="closeModal()">Close</button>
-    </div>
-</div>
-
-<footer>
-    <p>Follow me on social media:</p>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/venkatesh-bathini-b74611296/" target="_blank">LinkedIn</a>
-        <a href="https://www.behance.net/your-profile" target="_blank">Behance</a>
-        <a href="https://www.instagram.com/flankerxd.designs/?hl=en" target="_blank">Instagram</a>
-    </div>
-</footer>
-
-<!-- About Me section at the bottom -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>My name is Venkatesh Bathini, and I'm a passionate graphic designer and video editor. I specialize in creating visually stunning designs and engaging video content for various platforms. With experience in branding, digital marketing, and gaming content creation, I aim to deliver high-quality work that resonates with audiences.</p>
-</section>
-
-<script>
-    // Function to open the modal
-    function openModal() {
-        document.getElementById('contactModal').style.display = 'flex';
-    }
-
-    // Function to close the modal
-    function closeModal() {
-        document.getElementById('contactModal').style.display = 'none';
-    }
-</script>
-
-</body>
-</html>
+        <div
