@@ -62,6 +62,11 @@
             height: auto;
             border-radius: 8px;
             margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project img:hover {
+            transform: scale(1.05);
         }
 
         footer {
@@ -84,10 +89,12 @@
             color: white;
             font-size: 1.5rem;
             text-decoration: none;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
 
         .social-icons a:hover {
             color: #1e90ff;
+            transform: translateY(-5px);
         }
 
         .contact-button {
@@ -99,13 +106,14 @@
             color: white;
             cursor: pointer;
             font-size: 1.2rem;
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
         .contact-button:hover {
             background-color: #0066cc;
+            transform: scale(1.1);
         }
 
-        /* Modal (Popup) Styling */
         .modal {
             display: none;
             position: fixed;
@@ -127,10 +135,12 @@
             max-width: 500px;
             color: white;
             text-align: center;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
         }
 
-        .modal-content p {
-            margin: 20px 0;
+        .modal.show .modal-content {
+            transform: scale(1);
         }
 
         .close-button {
@@ -146,7 +156,6 @@
             background-color: #ff1a1a;
         }
 
-        /* Styling for About Me section at the bottom */
         #about {
             margin-top: 50px;
             padding: 50px 20px;
@@ -161,30 +170,40 @@
         #about p {
             font-size: 1.2rem;
         }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
 
-<header>
+<header class="fade-in">
     <h1>FlankerXd</h1>
     <p>Graphic Designer & Video Editor .</p>
     <p>I'm a passionate graphic designer and video editor. I specialize in creating stunning visuals and engaging videos for various platforms.</p>
     <button class="contact-button" onclick="openModal()">Contact Me</button>
 </header>
 
-<section id="projects">
+<section id="projects" class="fade-in">
     <h1>My Work</h1>
-
     <h3>Trading & Digital Marketing</h3>
     <div class="project-grid">
         <div class="project">
-          <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/sample1.png">
+            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/sample1.png">
         </div>
-        
         <div class="project">
             <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/DD1.png">
         </div>
-          <div class="project">
+        <div class="project">
             <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/pari%20jain%20smaple2.png">
         </div>
     </div>
@@ -192,52 +211,19 @@
     <h1>Gaming</h1>
     <div class="project-grid">
         <div class="project">
-          <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/Uncharted1.png">
+            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/Uncharted1.png">
         </div>
         <div class="project">
             <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/mambabhai1%20(1).png">
         </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/regabhai_s1.png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/regalto_smaple-1.png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/santra.png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/snaxgangstar1.png">
-        </div>
-        <div class="project">
-          <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/bgmi-smaple1.png">
-        </div>
-    </div>
-    
-    <h1>Other</h1>
-    <div class="project-grid">
-        <div class="project">
-          <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/111111.png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/fake_Mask.png">
-        </div>
-         <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/experiment.-3psd.png">
-        </div>
-         <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/experiment.-5psd.png">
-        </div>
-         <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/New%20car.jpg">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/experiment-7psd.jpg">
-        </div>
     </div>
 </section>
 
-<!-- Modal Popup for Contact Info -->
+<section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>My name is Venkatesh Bathini, and I'm a passionate graphic designer and video editor. I specialize in creating visually stunning designs and engaging video content for various platforms.</p>
+</section>
+
 <div id="contactModal" class="modal">
     <div class="modal-content">
         <h2>Contact Information</h2>
@@ -256,21 +242,28 @@
     </div>
 </footer>
 
-<!-- About Me section at the bottom -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>My name is Venkatesh Bathini, and I'm a passionate graphic designer and video editor. I specialize in creating visually stunning designs and engaging video content for various platforms. With experience in branding, digital marketing, and gaming content creation, I aim to deliver high-quality work that resonates with audiences.</p>
-</section>
-
 <script>
+    // Scroll animation for fade-in sections
+    window.addEventListener('scroll', () => {
+        const fadeInElements = document.querySelectorAll('.fade-in');
+        fadeInElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                element.classList.add('visible');
+            }
+        });
+    });
+
     // Function to open the modal
     function openModal() {
         document.getElementById('contactModal').style.display = 'flex';
+        document.querySelector('.modal').classList.add('show');
     }
 
     // Function to close the modal
     function closeModal() {
         document.getElementById('contactModal').style.display = 'none';
+        document.querySelector('.modal').classList.remove('show');
     }
 </script>
 
