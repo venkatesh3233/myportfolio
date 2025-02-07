@@ -27,284 +27,66 @@
             padding: 100px 20px;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 50px;
-        }
-
         section {
             margin: 50px 0;
         }
 
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .project-grid {
+        .project-grid, .video-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
 
-        .project {
+        .project, .video {
             width: 400px;
         }
 
-        .project img {
+        .project img, .video iframe {
             width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .project img:hover {
-            transform: scale(1.05);
         }
 
         footer {
             margin-top: 50px;
             padding: 50px;
         }
-
-        footer p {
-            margin-bottom: 20px;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: #1e90ff;
-            transform: translateY(-5px);
-        }
-
-        .contact-button {
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #1e90ff;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-        }
-
-        .contact-button:hover {
-            background-color: #0066cc;
-            transform: scale(1.1);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 500px;
-            color: white;
-            text-align: center;
-            transform: scale(0.8);
-            transition: transform 0.3s ease;
-        }
-
-        .modal.show .modal-content {
-            transform: scale(1);
-        }
-
-        .close-button {
-            background-color: #ff4c4c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .close-button:hover {
-            background-color: #ff1a1a;
-        }
-
-        #about {
-            margin-top: 50px;
-            padding: 50px 20px;
-            background-color: #1e1e1e;
-        }
-
-        #about h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        #about p {
-            font-size: 1.2rem;
-        }
-
-        /* Fade-in animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
     </style>
 </head>
 <body>
 
-<header class="fade-in">
+<header>
     <h1>FlankerXd</h1>
-    <p>Graphic Designer & Video Editor .</p>
-    <p>I'm a passionate graphic designer and video editor. I specialize in creating stunning visuals and engaging videos for various platforms.</p>
-    <button class="contact-button" onclick="openModal()">Contact Me</button>
+    <p>Graphic Designer & Video Editor</p>
+    <button onclick="openModal()">Contact Me</button>
 </header>
 
-<section id="projects" class="fade-in">
+<section id="projects">
     <h1>My Work</h1>
     <div class="project-grid">
         <div class="project">
             <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/sample1.png">
         </div>
-         <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/Fukra%20insaanBhai-sample1.jpg">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/traging.jpg">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/Untitled-1.jpg">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/experiment.-4psd.png">
-        </div>
-         <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/experiment.-5psd.png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/Shark_.jpg">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/fake_Mask.png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/111111.png">
-        </div>
-    </div>
-
-    <h1>Gaming</h1>
-    <div class="project-grid">
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/Uncharted1.png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/main/Thumbnails/mambabhai1%20(1).png">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/1.1snaxBhaiValorant2.jpg">
-        </div>
-        
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/Payal%20Gam...%20Red%20Heart.jpg">
-        </div>
-         <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/3.5%20Update%20120%20fps.jpg">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/Aggressive%20rank%20push.jpg">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/BGMI%20with%20KPTan.jpg">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/Gabbar%20Thumbnail.jpg">
-        </div>
-        <div class="project">
-            <img src="https://raw.githubusercontent.com/venkatesh3233/myportfolio/refs/heads/main/Thumbnails/Minecraft.jpg">
-        </div>
     </div>
 </section>
 
-<section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <p>My name is Venkatesh Bathini, and I'm a passionate graphic designer and video editor. I specialize in creating visually stunning designs and engaging video content for various platforms.</p>
-</section>
-
-<div id="contactModal" class="modal">
-    <div class="modal-content">
-        <h2>Contact Information</h2>
-        <p>Email: <a href="mailto:flankernub070@gmail.com" target="_blank">flankernub070@gmail.com</a></p>
-        <p>Phone: <a href="https://wa.me/917569339678" target="_blank">+91 7569339678</a></p>
-        <button class="close-button" onclick="closeModal()">Close</button>
+<section id="video-samples">
+    <h1>Video Samples</h1>
+    <div class="video-grid">
+        <div class="video">
+            <iframe width="400" height="225" src="https://youtu.be/u3MCrA0u_bs?si=tLLftOQIyA-zlXEz" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="400" height="225" src="https://youtu.be/wROlGJyTwnc" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
-</div>
+</section>
 
 <footer>
     <p>Follow me on social media:</p>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/venkatesh-bathini-b74611296/" target="_blank">LinkedIn</a>
-        <a href="https://www.behance.net/your-profile" target="_blank">Behance</a>
-        <a href="https://www.instagram.com/flankerxd.designs/?hl=en" target="_blank">Instagram</a>
-    </div>
 </footer>
-
-<script>
-    // Scroll animation for fade-in sections
-    window.addEventListener('scroll', () => {
-        const fadeInElements = document.querySelectorAll('.fade-in');
-        fadeInElements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
-                element.classList.add('visible');
-            }
-        });
-    });
-
-    // Function to open the modal
-    function openModal() {
-        document.getElementById('contactModal').style.display = 'flex';
-        document.querySelector('.modal').classList.add('show');
-    }
-
-    // Function to close the modal
-    function closeModal() {
-        document.getElementById('contactModal').style.display = 'none';
-        document.querySelector('.modal').classList.remove('show');
-    }
-</script>
 
 </body>
 </html>
